@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>WEB700</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/theme.css" />
+	<style>
+		td,
+		th {
+			border: 1px solid #dddddd;
+		}
+
+		.tid {
+			text-align: right;
+		}
+
+		.tspan {
+			text-align: center;
+		}
+	</style>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">Chahat</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+				<li class="nav-item active"><a class="nav-link" href="/htmlDemo">Html Demo</a></li>
+				<li class="nav-item"><a class="nav-link" href="/students/add">Add Student</a></li>
+			</ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a class="nav-link" href="/students">Students</a></li>
+				<li class="nav-item"><a class="nav-link" href="/tas">Teaching Assistants</a></li>
+				<li class="nav-item"><a class="nav-link" href="/courses">Courses</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<main class="col-md-12">
+				<h1 style="margin-top: 5%;">Students Information Table</h1>
+				<div class="tbl-div">
+					<table class="table">
+						<thead>
+							<tr>
+								<th colspan="4" class="tspan">Students serving as Teaching Assistants</th>
+							</tr>
+							<tr>
+								<th>Student Number</th>
+								<th>Student Full Name</th>
+								<th>Student Email</th>
+								<th>Student Program</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tid">1</td>
+								<td>Max Stella</td>
+								<td>maxstella@mySeneca.ca</td>
+								<td rowspan="5" class="tspan" style="vertical-align: middle;">Database Application
+									Developer
+								</td>
+							</tr>
+							<tr>
+								<td class="tid">2</td>
+								<td>Carry Henderson</td>
+								<td>carryhenderson@mySeneca.ca</td>
+							</tr>
+							<tr>
+								<td class="tid">3</td>
+								<td>Tanya Elizabeth</td>
+								<td>tanyaelizabeth@mySeneca.ca</td>
+							</tr>
+							<tr>
+								<td class="tid">4</td>
+								<td>Neha Kumari</td>
+								<td>nehakumari@mySeneca.ca</td>
+							</tr>
+							<tr>
+								<td class="tid">5</td>
+								<td>Elon Musk</td>
+								<td>elonmusk@mySeneca.ca</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th>Total</th>
+								<th> </th>
+								<th> </th>
+								<th> 5 students</th>
+							</tr>
+						</tfoot>
+					</table>
+					<p>The above students are enrolled in Database application program in Seneca college and are serving
+						as
+						Teaching assistant for the duration of the course</p>
+				</div>
+
+				<caption>Courses:</caption>
+				<div class="tbl-div">
+					<table class="table">
+						<thead>
+							<tr>
+								<th colspan="4" class="tspan">Courses available in DAD Program:</th>
+							</tr>
+							<tr>
+								<th>Course Id</th>
+								<th>Course Code</th>
+								<th>Description</th>
+								<th>Semester</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tid">1</td>
+								<td>DES720</td>
+								<td>Relational Database Design and Implementation</td>
+								<td rowspan="5" class="tspan" style="vertical-align: middle;">Semester 1</td>
+							</tr>
+							<tr>
+								<td class="tid">2</td>
+								<td>JAV745</td>
+								<td>Java Programming</td>
+							</tr>
+							<tr>
+								<td class="tid">3</td>
+								<td>OPS705</td>
+								<td>Introduction to Cloud Computing</td>
+							</tr>
+							<tr>
+								<td class="tid">4</td>
+								<td>SQL710</td>
+								<td>Database Administration and Management</td>
+							</tr>
+							<tr>
+								<td class="tid">5</td>
+								<td>WEB700</td>
+								<td>Web Programming</td>
+							</tr>
+							<tr>
+								<td class="tid">6</td>
+								<td>CAP805</td>
+								<td>Applied Capstone Project</td>
+								<td rowspan="6" class="tspan" style="vertical-align: middle;">Semester 2</td>
+							</tr>
+							<tr>
+								<td class="tid">7</td>
+								<td>CJV805</td>
+								<td>Database Connectivity Using Java</td>
+							</tr>
+							<tr>
+								<td class="tid">8</td>
+								<td>DBD800</td>
+								<td>Accessing Big Data</td>
+							</tr>
+							<tr>
+								<td class="tid">9</td>
+								<td>DBW825</td>
+								<td>Datawarehousing</td>
+							</tr>
+							<tr>
+								<td class="tid">10</td>
+								<td>SEC835</td>
+								<td>Security in Databases and Web Applications</td>
+							</tr>
+							<tr>
+								<td class="tid">11</td>
+								<td>WTP100</td>
+								<td>Work Term Preparation (Work-Integrated Learning option only)</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>The students must score 50 percent or above to pass the course semester.</p>
+				</div>
+
+				<h1 style="margin-top: 5%;">ICONIC Tourist Attractions of Canada List-</h1>
+				<div class="add-div">
+					<caption>The following places are some of the most known tourist attractions in Canada</caption>
+					<ol>
+						<li>Alberta
+							<ul>
+								<li>Banff town</li>
+								<li>Lake Louise</li>
+								<li>Moraine Lake</li>
+							</ul>
+						</li>
+						<li>British Columbia
+							<ul>
+								<li>Haida Gwaii</li>
+								<li>Canadian Rockies</li>
+								<li>Great Bear Rainforest</li>
+							</ul>
+						</li>
+						<li>Manitoba
+							<ul>
+								<li>The Forks</li>
+								<li>Polar Bears of Churchill</li>
+								<li>Riding Mountain National Park</li>
+							</ul>
+						</li>
+						<li>New Brunswick
+							<ul>
+								<li>Bay of Fundy and Fundy National Park</li>
+								<li>Hopewell Rocks</li>
+								<li>The Fundy Trail Parkway</li>
+							</ul>
+						</li>
+						<li>Saskatchewan
+							<ul>
+								<li>Prince Albert National Park</li>
+								<li>Fort Walsh National Historic Site</li>
+								<li>Royal Saskatchewan Museum</li>
+							</ul>
+						</li>
+						<li>Ontario
+							<ul>
+								<li>CN Tower</li>
+								<li>Royal Ontario Museum</li>
+								<li>Ripley's Aquarium</li>
+							</ul>
+						</li>
+						<li>Quebec
+							<ul>
+								<li>Place Royale</li>
+								<li>Le Château Frontenac</li>
+								<li>Musee de la Civilisation</li>
+							</ul>
+						</li>
+						<li>Nova Scotia
+							<ul>
+								<li>Cabot Trail</li>
+								<li>Sydney</li>
+								<li>Wolfville</li>
+							</ul>
+						</li>
+						<li>Prince Edward Island
+							<ul>
+								<li>Charlottetown</li>
+								<li>Peggy's Cove</li>
+								<li>Maritime Museum of the Atlantic</li>
+							</ul>
+						</li>
+						<li>Newfoundland and Labrador
+							<ul>
+								<li>Gros Morne National Park</li>
+								<li>L'Anse aux Meadows National Historic Site</li>
+								<li>Bonavista Peninsula</li>
+							</ul>
+						</li>
+					</ol>
+					<p>The second largest country in the world, Canada has no shortage of beautiful landscapes and
+						interesting sights for travelers to explore. From coast to coast to coast, the country is home
+						to
+						vibrant and culturally rich cities, along with incredible natural wonders.</p>
+				</div>
+
+				<h1 style="margin-top: 5%;">Beautiful Tourist Attraction Places Images</h1>
+				<div class="add-div">
+					<table class="table">
+						<tr>
+							<th>Mesmerizing Bonavista Peninsula in Newfoundland</th>
+							<td><img src="https://www.planetware.com/wpimages/2021/07/canada-newfoundland-labrador-top-attractions-bonavista-peninsula.jpg"
+									alt="Bonavista" width="600" height="360"></td>
+						</tr>
+						<tr>
+							<th>Beautiful view of CN Tower, Toronto</th>
+							<td><img src="https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/places-to-visit-ontario-toronto-cn-tower.jpg"
+									alt="CN Tower, Toronto" width="600" height="360"></td>
+						</tr>
+						<tr>
+							<th>Magnificient View of Casa Loma, Ontario</th>
+							<td><img src="https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/things-to-do-in-toronto-casa-loma.jpg"
+									alt="Casa Loma" width="600" height="360"></td>
+						</tr>
+					</table>
+					<p>The above places are some of the most iconic tourist attractions in Canada.They are some of the
+						most
+						famous places often visited by the tourists in Canada.</p>
+
+				</div>
+
+				<h1 style="margin-top: 5%;"> Hear some Self Soothing Audio !</h1>
+				<div class="add-div">
+					<audio controls>
+						<source src=" https://pat-crawford-sdds.netlify.app/shared/fall-2022/web700/A3/sample-audio.ogg"
+							type="audio/ogg">
+						<source src="https://pat-crawford-sdds.netlify.app/shared/fall-2022/web700/A3/sample-audio.mp3"
+							type="audio/mpeg">
+						Your browser does not support the audio element.
+					</audio>
+					<p> If you’ve ever released stress by dancing around your room to your favorite tunes or enjoyed
+						a
+						good cry with the help of a touching love song, you know how powerful music can be. It can
+						lift
+						you up when you’re low and calm you down when you’re anxious.
+						Music is a powerful tool for mood regulation and stress. The best part is, it’s always
+						available
+						to anyone who needs it.
+					</p>
+				</div>
+
+
+				<h1 style="margin-top: 5%;">Planet Earth Short Video</h1>
+				<div class="add-div">
+					<video width="400" controls>
+						<source src="https://pat-crawford-sdds.netlify.app/shared/fall-2022/web700/A3/sample-video.mp4"
+							type="video/mp4">
+						<source src="https://pat-crawford-sdds.netlify.app/shared/fall-2022/web700/A3/sample-video.ogg"
+							type="video/ogg">
+						Your browser does not support HTML video.
+					</video>
+					<p> Earth, our home planet, is a world unlike any other. The third planet from the sun, Earth is
+						the
+						only place in the known universe confirmed to host life.
+						With a radius of 3,959 miles, Earth is the fifth largest planet in our solar system, and
+						it's
+						the only one known for sure to have liquid water on its surface. Earth is also unique in
+						terms
+						of monikers. Every other solar system planet was named for a Greek or Roman deity, but for
+						at
+						least a thousand years, some cultures have described our world using the Germanic word
+						“earth,”
+						which means simply “the ground.”</p>
+				</div>
+			</main>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Sansita+Swashed:wght@300;600&family=Smooch+Sans:wght@700&family=Syne+Mono&display=swap&family=Oswald&display=swap');
+
+.bg-light{
+    box-shadow: rgb(105, 115, 113) 22px -16px 18px -5px;
+    background-color: rgb(90, 88, 85) !important;
+    -webkit-box-shadow: rgb(105, 115, 113) 22px -16px 18px -5px;
+    -moz-box-shadow: rgb(105, 115, 113) 22px -16px 18px -5px;
+    box-shadow: rgb(105, 115, 113) 22px -16px 18px -5px;
+}
+
+.tbl-div{
+    -webkit-box-shadow: 10px 10px 17px 0px rgba(26,26,26,1);
+    -moz-box-shadow: 10px 10px 17px 0px rgba(26,26,26,1);
+    box-shadow: 10px 10px 17px 0px rgba(26,26,26,1);
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: rgb(240, 238, 235) !important;
+}
+.add-div{
+    -webkit-box-shadow: 10px 10px 17px 0px rgba(26,26,26,1);
+    -moz-box-shadow: 10px 10px 17px 0px rgba(26,26,26,1);
+    box-shadow: 10px 10px 17px 0px rgba(26,26,26,1);
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: rgb(240, 238, 235) !important;
+}
+.navbar-light .navbar-brand{
+    color: rgb(255, 255, 255) ;
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 35px;
+}
+.nav-link{
+    font-family: 'arial', sans-serif;
+    color: rgb(227, 227, 237) !important;
+}
+.nav-link:hover{
+    color: #dfec22 !important;  
+}
+html, body{
+    overflow: auto;
+    background: rgb(175, 181, 219); /* fallback color */
+    background: linear-gradient(to bottom, rgb(243, 176, 205), rgb(240, 200, 230));
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    
+}
+table tr:nth-child(odd) td, table tr:nth-child(odd) th{
+    background-color: #d8d3d6 !important;
+} 
+h1,h2,h3,h4,h5,h6{
+    color: rgb(68, 65, 222);
+    text-shadow: 1px 1px #747474;
+    font-family: 'Helvetica', sans-serif;
+
+}
+a{
+    color: rgb(22, 28, 31) !important;
+}
+a:hover{
+    color: rgb(219, 222, 38)  !important;
+}
+fieldset legend {
+    font-family: 'League Gothic', sans-serif;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: rgb(94, 97, 100);
+}
+hr{
+    background-color: azure; 
+}
+.btn-primary{
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    background-color: #7f867f;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(210, 206, 206);
+} 
+.btn-primary:hover{
+    background-color: #b5c0b5;
+}
+.btn-primary:active {
+    background-color: #8b9f8a;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

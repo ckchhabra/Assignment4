@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express": "^4.18.1",
+    "save": "^2.9.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "assignment4",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Chahat Kaur Chhabra",
+  "license": "ISC",
+  "description": ""
+}
