@@ -12,5 +12,14 @@
   "main": "server.js",
   "author": "Chahat Kaur Chhabra",
   "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckchhabra/Assignment4.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ckchhabra/Assignment4/issues"
+  },
+  "homepage": "https://github.com/ckchhabra/Assignment4#readme",
   "description": ""
 }
