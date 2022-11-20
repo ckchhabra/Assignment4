@@ -146,7 +146,7 @@ app.get("/course/:id", (req,res)=>{
 });
 
 app.get("/students/add", function(req,res){
-  res.render("addStudent");
+  res.render("addstudent");
 });
 
 
