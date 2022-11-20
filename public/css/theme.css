@@ -40,7 +40,7 @@
 html, body{
     overflow: auto;
     background: rgb(175, 181, 219); /* fallback color */
-    background: linear-gradient(to bottom, rgb(243, 176, 205), rgb(240, 200, 230));
+    background: linear-gradient(to bottom, rgb(242, 17, 115), rgb(244, 184, 229));
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -48,7 +48,7 @@ html, body{
     
 }
 table tr:nth-child(odd) td, table tr:nth-child(odd) th{
-    background-color: #d8d3d6 !important;
+    background-color: #e9c0d6 !important;
 } 
 h1,h2,h3,h4,h5,h6{
     color: rgb(68, 65, 222);
