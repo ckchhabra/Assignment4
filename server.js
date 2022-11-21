@@ -8,7 +8,7 @@
 
 * Online (Cyclic) Link: https://dark-red-marlin-sari.cyclic.app
 *
-********************************************************************************/ 
+********************************************************************************/
 
 var HTTP_PORT = process.env.PORT || 8080;
 var express = require("express");
@@ -21,14 +21,14 @@ var app = express();
 
 app.use(express.static("public"));
 // setup a 'route' to listen on the default url path
-app.use((req,res,next)=>{
+app.use((req, res, next) => {
 
-let userAgent=req.get("user-agent");
-console.log(userAgent);
-next();
+  let userAgent = req.get("user-agent");
+  console.log(userAgent);
+  next();
 })
 
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 app.use(function (req, res, next) {
   let route = req.path.substring(1);
@@ -59,14 +59,14 @@ app.engine(
         );
       },
       equal: function (lvalue, rvalue, options) {
-          if (arguments.length < 3)
+        if (arguments.length < 3)
           throw new Error("Handlebars Helper equal needs 2 parameters");
-          if (lvalue != rvalue) {
+        if (lvalue != rvalue) {
           return options.inverse(this);
-          } else {
+        } else {
           return options.fn(this);
-          }
-         }
+        }
+      }
     },
   })
 );
@@ -79,42 +79,42 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.get("/home", (req,res)=>{
+app.get("/home", (req, res) => {
   res.render("home");
 });
 
-app.get("/about", function(req,res){
+app.get("/about", function (req, res) {
   res.render("about");
 });
 
-app.get("/htmlDemo", function(req,res){
+app.get("/htmlDemo", function (req, res) {
   res.render("htmlDemo");
 });
 
-app.get("/students",(req,res)=>{
-  if(req.query.course){
-    userMod.getStudentsByCourse(req.query.course).then(data=>{
-       res.render("students",{students: data});
-        
-    }).catch(err=>{
-       
-        res.json({message:"no results"});
+app.get("/students", (req, res) => {
+  if (req.query.course) {
+    userMod.getStudentsByCourse(req.query.course).then(data => {
+      res.render("students", { students: data });
+
+    }).catch(err => {
+
+      res.json({ message: "no results" });
     })
-}else{
-    userMod.getAllStudents().then(data=>{
-        res.render("students",{students: data}); 
-    }).catch(err=>{
-        res.senc({message:"no results"}); 
+  } else {
+    userMod.getAllStudents().then(data => {
+      res.render("students", { students: data });
+    }).catch(err => {
+      res.senc({ message: "no results" });
     });
-}
+  }
 });
 
-app.get("/courses",(req,res)=>{
-  userMod.getCourses().then(data=>{
-    res.render("courses", {courses: data}); // or res.send() would work here too
-}).catch(err=>{
-    res.render("courses", {message: "no results"}); // show the error to the user
-});
+app.get("/courses", (req, res) => {
+  userMod.getCourses().then(data => {
+    res.render("courses", { courses: data }); // or res.send() would work here too
+  }).catch(err => {
+    res.render("courses", { message: "no results" }); // show the error to the user
+  });
 });
 
 // app.get("/tas",(req,res)=>{
@@ -125,58 +125,58 @@ app.get("/courses",(req,res)=>{
 //   });
 // });
 
-app.get('/student/:num', function(req, res) {
+app.get('/student/:num', function (req, res) {
 
-  userMod.getStudentByNum(req.params.num).then(data=>{
+  userMod.getStudentByNum(req.params.num).then(data => {
     res.render("student", { student: data });
-}).catch(err=>{
-    
-    res.json({message:"no results"}); 
-});
-});
+  }).catch(err => {
 
-app.get("/course/:id", (req,res)=>{
-    
-  userMod.getCourseById(req.params.id).then(data=>{
-      res.render("course", {course: data});
-  }).catch(err=>{
-      
-      res.json({message:"no results"}); 
+    res.json({ message: "no results" });
   });
 });
 
-app.get("/students/add", function(req,res){
+app.get("/course/:id", (req, res) => {
+
+  userMod.getCourseById(req.params.id).then(data => {
+    res.render("course", { course: data });
+  }).catch(err => {
+
+    res.json({ message: "no results" });
+  });
+});
+
+app.get("/students/add", function (req, res) {
   res.render("addstudent");
 });
 
 
-app.post("/students/add", (req,res)=>{
-  req.body.TA = (req.body.TA) ? true : false;   
-  userMod.addStudent(req.body).then(()=>{
-      res.redirect("/students");
-      }).catch((err)=>{
-      res.json("Error");
+app.post("/students/add", (req, res) => {
+  req.body.TA = (req.body.TA) ? true : false;
+  userMod.addStudent(req.body).then(() => {
+    res.redirect("/students");
+  }).catch((err) => {
+    res.json("Error");
   });
 });
 
 app.post("/student/update", (req, res) => {
-  req.body.TA = (req.body.TA) ? true : false;  
+  req.body.TA = (req.body.TA) ? true : false;
   userMod.updateStudent(req.body);
   res.redirect("/students");
- });
+});
 
 // app.use((req, res,next) => {
 //   res.status(404).sendFile(path.join(__dirname,"/views/404.html"));
 // });
 
-app.use((req,res,next)=>{
+app.use((req, res, next) => {
   res.status(404).render("route");
 });
 
-userMod.initialize().then(()=>{
+userMod.initialize().then(() => {
   // start the server
-  app.listen(HTTP_PORT, ()=>{console.log("server listening on port: " + HTTP_PORT)});
-}).catch(err=>{
+  app.listen(HTTP_PORT, () => { console.log("server listening on port: " + HTTP_PORT) });
+}).catch(err => {
   // output the error to the console
-  res.json({message: err});
+  res.json({ message: err });
 });

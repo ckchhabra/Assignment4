@@ -91,26 +91,44 @@ module.exports.getStudentsByCourse = function(course){
 }
 
 // to retrieve the details of a particular student
-module.exports.getStudentByNum = function(num){
-  return new Promise((resolve, reject) => {
-    // Validation
-    if (num < 0) { 
-      reject("Invalid student number"); 
-      return false; 
-    }
-    let student_details = null; 
-    for (let i = 1; i < dataCollection.students.length; i++) {
-      if(dataCollection.students[i]["studentNum"] == num){
-        student_details = dataCollection.students[i]; 
-        break;
-      }
-    }
+// module.exports.getStudentByNum = function(num){
+//   return new Promise((resolve, reject) => {
+//     // Validation
+//     if (num < 0) { 
+//       reject("Invalid student number"); 
+//       return false; 
+//     }
+//     let student_details = null; 
+//     for (let i = 1; i < dataCollection.students.length; i++) {
+//       if(dataCollection.students[i]["studentNum"] == num){
+//         student_details = dataCollection.students[i]; 
+//         break;
+//       }
+//     }
     
-    if (dataCollection.students.length == 0){
-      reject("No student details found with Student Number:" + num);
-    }
-    resolve(student_details);
+//     if (dataCollection.students.length == 0){
+//       reject("No student details found with Student Number:" + num);
+//     }
+//     resolve(student_details);
+//   });
+// }
+module.exports.getStudentByNum=function(num){
+  return new Promise(function(resolve,reject){
+      var student = new Object();
+      dataCollection.students.forEach((item) =>{
+          if(item.studentNum==num){
+              student=item;
+          } 
+          }
+      ); 
+      if(Object.entries(student).length === 0){
+          reject("no results returned")
+      }else{
+          resolve(student);
+      }
+   
   });
+
 }
 
 module.exports.getCourseById=function(id){
