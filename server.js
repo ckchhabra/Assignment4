@@ -180,9 +180,9 @@ app.get("/student/:studentNum", (req, res) => {
 app.get("/students/add", (req, res) => {
   db.getCourses().then(data=>{
     courses = data;
-    res.render("addStudent", {courses: data});
+    res.render("addstudent", {courses: data});
   }).catch(() => {
-    res.render("addStudent", {courses: []});      
+    res.render("addstudent", {courses: []});      
   });
 });
 
